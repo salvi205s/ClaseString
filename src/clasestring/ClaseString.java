@@ -11,47 +11,48 @@ package clasestring;
  */
 public class ClaseString {
 
-   
     public static void main(String[] args) {
+
+        //comentario inicio metodo main
         
         String s = "iesmardealboran.com";
-        
+
         // Tamaño de la cadena
         System.out.println("Tamaño: " + s.length());
-        
+
         // Obtener el char de una posicion concreta
         System.out.println("char de la posicion 5: " + s.charAt(5));
-        
+
         // Obtener subcadena desde el caracter i-ésimo hasta el final
         // de la cadena
         String subcadena = s.substring(3);
         System.out.println("Subcadena = " + subcadena);
-       
+
         // Obtener subcadena desde el caracter i-ésimo hasta el 
         // caracter j-ésimo de la cadena
-        subcadena = s.substring(8,15);
+        subcadena = s.substring(8, 15);
         System.out.println("Subcadena = " + subcadena);
-        
+
         // Concatenar cadenas. Equivale al operador +
         String s1 = "ies";
         String s2 = "mardealboran.com";
-        String nuevo = s1+s2;
+        String nuevo = s1 + s2;
         String nuevo2 = s1.concat(s2);
         System.out.println("Nuevo: " + nuevo);
         System.out.println("Nuevo2: " + nuevo2);
-        
+
         // Devuelve el índice dentro de la cadena
         // de la primera aparición de la cadena a buscar
         int indice = nuevo.indexOf("mar");
         System.out.println("Indice: " + indice);
-        
+
         indice = nuevo.indexOf("ran", 10);
-        System.out.println("Indice: " + indice);    
-        
+        System.out.println("Indice: " + indice);
+
         // Métodos equals y equalsIgnoreCase
         System.out.println("Igualdad Java y java: " + "Java".equals("java"));
         System.out.println("Igualdad Java y java: " + "Java".equalsIgnoreCase("java"));
-        
+
         // Comparación de cadenas (diccionario). Método compareTo()
         // Devuelve cero si las cadenas son iguales, 
         // un negativo si s1 está antes de s2 en el diccionario (menor)
@@ -62,30 +63,29 @@ public class ClaseString {
         System.out.println("Comparación de s1 y aes: " + compareTo);
         compareTo = "aes".compareTo(s1);
         System.out.println("Comparación de aes y s1: " + compareTo);
-        
+
         //Conversión mayúsculas y minúsculas
         String mayusculas = s2.toUpperCase();
         System.out.println("s2 en mayus: " + mayusculas);
         System.out.println("String mayusculas en minusc: " + mayusculas.toLowerCase());
-        
+
         // Quitar espacios delante y detrás
         String espacios = " palabra palabra ";
         System.out.println("Tamaño de espacios: " + espacios.length());
         String sinEspacios = espacios.trim();
         System.out.println("Tamaño de sinEspacios: " + sinEspacios.length());
-        
+
         // Reemplazo de caracteres
-        System.out.println("String original: " + s2 );
+        System.out.println("String original: " + s2);
         String str2 = s2.replace('a', 'x');
         System.out.println("String reemplazado: " + str2);
-        
+
         // Contenido
         String aBuscar = "dealbox";
-        System.out.println("¿Contiene " + s2 + " la subcadena " 
+        System.out.println("¿Contiene " + s2 + " la subcadena "
                 + aBuscar + "? " + s2.contains(aBuscar));
-        
+
         // Probar métodos endsWith, startsWith, isEmpty
-        
         // Obtener un array de char de la cadena
         // Declaración de una variable array de tipo char
         char[] arrayChar;
@@ -93,13 +93,13 @@ public class ClaseString {
         // El atributo length existe en todos los arrays y 
         // me indica su tamaño. Equivalente al método length()
         // de los String
-        for(int i = 0; i<arrayChar.length; i++){
+        for (int i = 0; i < arrayChar.length; i++) {
             // Para acceder a cada posición del array uso
             // los corchetes
-            System.out.println("Posición i = " + i 
+            System.out.println("Posición i = " + i
                     + " contenido = " + arrayChar[i]);
         }
-        
+
     }
-    
+
 }
